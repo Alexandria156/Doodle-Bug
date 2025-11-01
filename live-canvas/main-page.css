@@ -1,0 +1,21 @@
+#title{
+    text-align: center;
+    font-family: 'Lucida Sans';
+}
+
+#description{
+    text-align: center;
+    font-family: 'Lucida Sans';
+}
+
+#userCanvas{
+    text-align: left;
+    font-family: 'Lucida Sans';
+}
+
+#sketchCanvas{
+    display: flex;
+    margin: auto;
+    padding: 0;
+    
+}
