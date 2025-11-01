@@ -3,22 +3,12 @@ console.log("JS is loaded!");
 
 const userCanvas = document.getElementById("sketchCanvas");
 const context = userCanvas.getContext("2d");
-
-context.fillStyle = "blue";
-context.fillRect(10, 10, 150, 100);
-
-context.strokeStyle = "green";
-context.lineWidth = 50;
-context.beginPath();
-context.moveTo(20, 40)
-context.lineTo(100, 160);
-context.stroke();
-
-
-let coordX = 0;
-let coordY = 0;
+const colorPicker = document.getElementById("colorPicker");
 
 let activeDrawing = false;
+let brushSize = 15;
+let brushColor = colorPicker.value;
+
 console.log("Canvas get:", userCanvas);
 console.log("Context get:", context);
 
@@ -30,9 +20,9 @@ function startDrawing(mouse){
 
 function currentlyDrawing(mouse){
     console.log("Mouse moving")
-    context.lineWidth = 20;
-    context.lineCap = "butt";
-    context.fillStyle = "red";
+    context.lineWidth = brushSize;
+    context.lineCap = "round";
+    context.fillStyle = brushColor;
     if(activeDrawing == true)
     {
         console.log("Drawing!")
@@ -50,34 +40,15 @@ function endDraw()
     context.beginPath();
 }
 
+function changeColor(change)
+{
+    brushColor = change.target.value;
+    console.log("Changed color ", value)
+}
+
 userCanvas.addEventListener("mousedown", startDrawing);
 userCanvas.addEventListener("mouseout", endDraw);
 userCanvas.addEventListener("mouseup",endDraw);
 userCanvas.addEventListener("mousemove",currentlyDrawing);
-/*
-userCanvas.onmousedown = function (mouse) {
-    console.log("Mouse down");
-    activeDrawing = true;
+colorPicker.addEventListener("input", changeColor);
 
-
-}
-userCanvas.onmousemove = function (mouse) {
-    if (activeDrawing = true) {
-        console.log("Mouse moving");
-        context.fillStyle = "red";
-        context.lineWidth = 50;
-        context.beginPath();
-        //context.moveTo(100, 40);
-        //context.lineTo(12, 23);
-        
-        context.stroke();
-    }
-}
-userCanvas.onmouseout = function (mouse) {
-    console.log("No drawing; mouse off")
-    activeDrawing = false;
-}
-userCanvas.onmouseup = function (mouse) {
-    console.log("No drawing; mouse up")
-    activeDrawing = false;
-}*/
