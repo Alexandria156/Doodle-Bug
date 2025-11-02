@@ -1,38 +1,47 @@
 <!doctype html>
-<html lang = "en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>Doodle Bug</title>
-    <link rel = "stylesheet" href = "main-page.css">
+    <link rel="stylesheet" href="main-page.css">
 </head>
-<h1 id = "title">Doodle Bug</h1>
-<h2 id = "description">A website by Alexandria Y.</h2>
+<h1 id="title">Doodle Bug</h1>
+<h2 id="description">A website by Alexandria Y.</h2>
+
+<h3 id="userCanvas">Your Canvas</h3>
 
 <body>
-    <div>
-        <label id= "userCanvas">Your canvas</label>
+    <div id = "gridLayout">
+        <div id="board">
 
-        <canvas id = "sketchCanvas" 
-        width = "800" 
-        height ="500" 
-        style="border:3px
+        <canvas id="sketchCanvas" width="1000" height="500" style="border:5px
         solid #000000;">
         </canvas>
-        <table id ="canvasTools">
+    </div>
+    <div id="canvasTools">
+        <table>
             <thread>
                 <th>
-                    <td>
-                        <label><input type = "number" value="10" min="5" max ="30"step = "1" id = "brushSize"></input></label>
-
-                        <label>Brush color<input id="colorPicker" type="color" value = "#000000"></label>
-
-                        <button id="clear">Clear</button>
-                    </td>
+                <td>
+                    <label id="sizeTitle">
+                        Brush Size
+                        <br>
+                        <input type="range" value="10" min="5" max="50" step="1" id="brushSize"></input>
+                    </label>
+                    <label id="colorTitle">
+                        Color Picker
+                        <br>
+                        <input id="colorPicker" type="color" value="#000000">
+                    </label>
+                    <button id="clear">Clear canvas</button>
+                </td>
                 </th>
             </thread>
         </table>
     </div>
-    <script src = "/live-canvas/userDrawingInput.js"></script>
+    </div>
+    <script src="/live-canvas/userDrawingInput.js"></script>
 </body>
+
 </html>

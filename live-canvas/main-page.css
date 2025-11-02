@@ -17,6 +17,47 @@
     display: flex;
     margin: auto;
     padding: 0;
-
+    border-radius: 25px;
 }
 
+#sizeTitle{
+    text-align: center;
+    display: block;
+    font-family: 'Lucida Sans';
+}
+
+#colorTitle{
+    text-align: center;
+    display: block;
+    font-family: 'Lucida Sans';
+}
+
+#brushSize{
+    display: block;
+    margin:  0 auto;
+    width: 200px;
+    height: 30px;
+}
+#colorPicker{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 100px;
+}
+#gridLayout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#canvasTools{
+    display: flex;
+}
+
+#board{
+    display: flex;
+}
+
+#clear{
+    display: block;
+    margin: 0 auto;
+}

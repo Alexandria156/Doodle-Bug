@@ -45,7 +45,7 @@ function changeColor(change) {
 }
 
 function changeSize(brush){
-    lineWidth = brush.target.value;
+    brushSize = brush.target.value;
     console.log("Changed brush size");
     currentlyDrawing(brush);
 }
