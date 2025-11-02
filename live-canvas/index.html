@@ -23,12 +23,12 @@
             <thread>
                 <th>
                     <td>
-                        <button value = "Brush size">Brush Size</button>
+                        <label><input type = "number" value="10" min="5" max ="30"step = "1" id = "brushSize"></input></label>
 
                         <label>Brush color<input id="colorPicker" type="color" value = "#000000"></label>
 
-                        <button value = "Undo">Undo</button>
-                        <button value="Redo">Redo</button>
+                        <button id = "undo">Undo</button>
+                        <button id="clear">Clear</button>
                     </td>
                 </th>
             </thread>
