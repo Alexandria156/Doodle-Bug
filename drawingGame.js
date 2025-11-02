@@ -20,6 +20,7 @@ const words = ["Apple", "Airplane", "Backpack", "Arm", "Bear", "Horse",
     "Zebra", "Giraffe", "Mole", "Wagon", "Boar", "Palm tree", "Volcano"
 ];
 
+console.log("Key got and words loaded");
 
 const promptWord = document.getElementById("newWord");
 const userCanvas = document.getElementById("sketchCanvas");
@@ -52,7 +53,7 @@ async function submission(){
     try {
         const canvasImg = userCanvas.toDataURL('image/png');
         const base64 = canvasImg.split(',')[1];
-
+        console.log("Evaluated your work!");
         const critque = await evaluateIlust(base64, currentWord);
         displayFeedback.textContent = critque;
         submitButton.disabled = true;
