@@ -101,12 +101,13 @@ async function evaluateIlust(canvasImage, prompt) {
     }
 }
 
+startGame();
 window.addEventListener("DOMContentLoaded", () => {
+    startGame();
     userCanvas;
     colorPicker;
     sizeChange;
     wipeCanvas;
-    startGame()
     //getAWord();
     if(submitButton){
         submitButton.addEventListener("click", submission);
