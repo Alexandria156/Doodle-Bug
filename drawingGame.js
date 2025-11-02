@@ -27,6 +27,7 @@ const sizeChange = document.getElementById("brushSize");
 const wipeCanvas = document.getElementById("clear");
 const submitButton = document.getElementById("submit");
 const displayFeedback = document.getElementById("critque");
+
 let currentWord = "";
 
 

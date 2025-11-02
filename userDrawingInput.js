@@ -9,6 +9,10 @@ const sizeChange = document.getElementById("brushSize");
 const wipeCanvas = document.getElementById("clear");
 
 const startGame = document.getElementById("startGame");
+if(startGame)
+{
+    startGame.addEventListener("click",switchToGame);
+}
 
 let activeDrawing = false;
 let brushSize = sizeChange.value;
