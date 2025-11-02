@@ -21,8 +21,10 @@ const words = ["Apple", "Airplane", "Backpack", "Arm", "Bear", "Horse",
 
 
 const promptWord = document.getElementById("newWord");
-const gameStart = document.getElementById("game");
 const userCanvas = document.getElementById("sketchCanvas");
+const colorPicker = document.getElementById("colorPicker");
+const sizeChange = document.getElementById("brushSize");
+const wipeCanvas = document.getElementById("clear");
 const submitButton = document.getElementById("submit");
 const displayFeedback = document.getElementById("critque");
 let currentWord = "";
@@ -100,5 +102,11 @@ async function evaluateIlust(canvasImage, prompt) {
     }
 }
 
-window.addEventListener("DOMContentLoaded", startGame);
+window.addEventListener("DOMContentLoaded", () => {
+    userCanvas;
+    colorPicker;
+    sizeChange;
+    wipeCanvas;
+
+});
 submitButton.addEventListener("click", submission);
