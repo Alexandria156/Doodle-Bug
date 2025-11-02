@@ -62,10 +62,6 @@ async function submission(){
     }
 }
 
-function displayResponse(critque){
-    return critque;
-}
-
 async function evaluateIlust(canvasImage, prompt) {
     try {
         console.log("Reveiwing illustration");
@@ -110,4 +106,5 @@ window.addEventListener("DOMContentLoaded", () => {
     wipeCanvas;
 
 });
-submitButton.addEventListener("click", submission);
+
+//submitButton.addEventListener("click", submission);
