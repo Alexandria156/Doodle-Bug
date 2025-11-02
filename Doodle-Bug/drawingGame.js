@@ -24,14 +24,14 @@ const words = ["Apple", "Airplane", "Backpack", "Arm", "Bear", "Horse",
 
 const promptWord = document.getElementById("newWord");
 const gameStart = document.getElementById("game");
+const userCanvas = document.getElementById("sketchCanvas");
+const submitButton = document.getElementById("submit");
 let currentWord = "";
 
 
 function startGame(){
     getAWord();
 }
-
-function
 
 function getAWord() {
     let randomNum = Math.floor(Math.random()) * (words.length);
@@ -42,6 +42,20 @@ function getAWord() {
     return currentWord;
 }
 
+async function submission(){
+    submitButton.disabled = true;
+    submitButton.textContent = "Reviewing . . ."
+
+    try {
+        const canvasImg = userCanvas.toDataUrl('users-work/png');
+        const base64 = canvasImg.split(',')[1];
+
+        const critque = await evaluateIlust(base64, currentWord);
+    } 
+    catch (error) {
+        console.log("Error in submisson:", error);
+    }
+}
 
 async function evaluateIlust(canvasImage, prompt) {
     try {
