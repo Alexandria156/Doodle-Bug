@@ -1,3 +1,4 @@
+import { GoogleGenerativeAI } from '@google/generative-ai';
 const ai = new GoogleGenerativeAI({ apiKey: 'AIzaSyBD3jJViJ7S1kA2xE-jCTgCPV5P7s2ICD0' });
 
 const words = ["Apple", "Airplane", "Backpack", "Arm", "Bear", "Horse",
