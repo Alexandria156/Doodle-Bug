@@ -11,6 +11,8 @@
 #userCanvas{
     text-align: left;
     font-family: 'Lucida Sans';
+    font-size: x-large;
+    padding-left: 50px;
 }
 
 #sketchCanvas{
@@ -56,8 +58,36 @@
 #board{
     display: flex;
 }
-
+#undo{
+    display: block;
+    margin: 0 auto;
+    width: 97px;
+    height: 100px;
+    font-size: x-large;
+    font-family: 'Lucida Sans';
+}
+#redo{
+    display: block;
+    margin: 0 auto;
+    width: 97px;
+    height: 100px;
+    font-size: x-large;
+    font-family: 'Lucida Sans';
+}
 #clear{
     display: block;
     margin: 0 auto;
+    width:200px;
+    height: 100px;
+    font-size:x-large;
+    font-family: 'Lucida Sans';
+}
+
+#startGame{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 100px;
+    font-size: x-large;
+    font-family: 'Lucida Sans';
 }

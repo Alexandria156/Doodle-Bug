@@ -34,7 +34,14 @@
                         <br>
                         <input id="colorPicker" type="color" value="#000000">
                     </label>
-                    <button id="clear">Clear canvas</button>
+                    <table>
+                        <th id = undoRedo>
+                            <td><button id ="undo">Undo</button></td>
+                            <td><button id = "redo">Redo</button></td>
+                        </th>
+                    </table>
+                    <button id="clear">Clear Canvas</button>
+                    <button id ="startGame">Play a Game!</button>
                 </td>
                 </th>
             </thread>
@@ -42,6 +49,7 @@
     </div>
     </div>
     <script src="/live-canvas/userDrawingInput.js"></script>
+    <script src = "/live-canvas/drawingGame.js"></script>
 </body>
 
 </html>
