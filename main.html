@@ -6,21 +6,18 @@
     <title>Appraisal Game</title>
     <link rel="stylesheet" href="main-page.css">
 </head>
-<h1 id = "title">Create a Piece of Art Given the Request</h1>
-<h2 id = "description">Your work will be evaluated!</h2>
-<h6 id = "clarifcation">just a little bit!</h6>
+<h1 id="title">Create a Piece of Art Given the Request</h1>
+<h2 id="description">Your work will be evaluated!</h2>
+<h6 id="clarifcation">just a little bit!</h6>
 <h3 id="userCanvas">Your Canvas</h3>
 
 <body>
     <div id="game">
-        <div id = "AIRequest">
-            <span id ="AIPrompt">
+        <div id="AIRequest">
+            <span id="AIPrompt">
                 Illustrate a portrait of:
             </span>
-            <h3 id ="newWord"></h3>
-        </div>
-        <div id = "referenceImage" style="display: none;">
-            <img id = "searchedImage" src="" alt = "Reference">
+            <h3 id="newWord" value = ""></h3>
         </div>
     </div>
     <div id="gridLayout">
@@ -46,14 +43,14 @@
                             <input id="colorPicker" type="color" value="#000000">
                         </label>
                         <button id="clear">Clear Canvas</button>
-                        <button id = "submit">Submit Work</button>
-                        <p id ="critque" value =""></p>
+                        <button id="submit">Submit Work</button>
+                        <p id="critque" value=""></p>
                     </td>
                     </th>
                 </thread>
             </table>
-            <script type = "module" src="drawingGame.js"></script>
-            <script type = "module" src="userDrawingInput.js"></script>
+            <script type="module" src="drawingGame.js"></script>
+            <script type="module" src="userDrawingInput.js"></script>
         </div>
     </div>
     <div>
