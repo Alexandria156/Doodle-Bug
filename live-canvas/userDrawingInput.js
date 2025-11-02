@@ -5,7 +5,7 @@ const userCanvas = document.getElementById("sketchCanvas");
 const context = userCanvas.getContext("2d");
 const colorPicker = document.getElementById("colorPicker");
 const sizeChange = document.getElementById("brushSize")
-
+const wipeCanvas = document.getElementById("clear")
 let activeDrawing = false;
 let brushSize = sizeChange.value;
 let brushColor = colorPicker.value;
@@ -46,6 +46,13 @@ function changeColor(change) {
 
 function changeSize(brush){
     lineWidth = brush.target.value;
+    console.log("Changed brush size");
+    currentlyDrawing(brush);
+}
+
+function clearCanvas(){
+    console.log("Cleared canvas");
+    context.clearRect(0,0, userCanvas.width, userCanvas.height);
 }
 
 userCanvas.addEventListener("mousedown", startDrawing);
@@ -53,5 +60,6 @@ userCanvas.addEventListener("mouseout", endDraw);
 userCanvas.addEventListener("mouseup", endDraw);
 userCanvas.addEventListener("mousemove", currentlyDrawing);
 colorPicker.addEventListener("input", changeColor);
-sizeChange.addEventListener("change", changeSize);
+sizeChange.addEventListener("input", changeSize);
+wipeCanvas.addEventListener("click", clearCanvas);
 
