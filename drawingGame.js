@@ -106,7 +106,8 @@ window.addEventListener("DOMContentLoaded", () => {
     colorPicker;
     sizeChange;
     wipeCanvas;
-    getAWord();
+    startGame()
+    //getAWord();
     if(submitButton){
         submitButton.addEventListener("click", submission);
     }
