@@ -6,3 +6,54 @@
     <title>Appraisal Game</title>
     <link rel="stylesheet" href="main-page.css">
 </head>
+<h1 id = "title">Create a Piece of Art Given the Request</h1>
+<h2 id = "description">Your work will be evaluated!</h2>
+<h6 id = "clarifcation">just a little bit!</h6>
+<h3 id="userCanvas">Your Canvas</h3>
+
+<body>
+    <div id="game">
+        <div id = "AIRequest">
+            <span id ="AIRequest">
+                Illustrate a portrait of:
+            </span>
+        </div>
+        <div id = "referenceImage" style="display: none;">
+            <img id = "searchedImage" src="" alt = "Reference">
+        </div>
+    </div>
+    <div id="gridLayout">
+        <div id="board">
+
+            <canvas id="sketchCanvas" width="1000" height="500" style="border:5px
+        solid #000000;">
+            </canvas>
+        </div>
+        <div id="canvasTools">
+            <table>
+                <thread>
+                    <th>
+                    <td>
+                        <label id="sizeTitle">
+                            Brush Size
+                            <br>
+                            <input type="range" value="10" min="5" max="50" step="1" id="brushSize"></input>
+                        </label>
+                        <label id="colorTitle">
+                            Color Picker
+                            <br>
+                            <input id="colorPicker" type="color" value="#000000">
+                        </label>
+                        <button id="clear">Clear Canvas</button>
+                        <button id = "submit">Submit Work</button>
+                    </td>
+                    </th>
+                </thread>
+            </table>
+            <script src="/Doodle-Bug/userDrawingInput.js"></script>
+            <script src="/Doodle-Bug/drawingGame.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -12,36 +12,38 @@
 <h3 id="userCanvas">Your Canvas</h3>
 
 <body>
-    <div id = "gridLayout">
+    <div id="gridLayout">
         <div id="board">
 
-        <canvas id="sketchCanvas" width="1000" height="500" style="border:5px
+            <canvas id="sketchCanvas" width="1000" height="500" style="border:5px
         solid #000000;">
-        </canvas>
+            </canvas>
+        </div>
+        <div id="canvasTools">
+            <table>
+                <thread>
+                    <th>
+                    <td>
+                        <label id="sizeTitle">
+                            Brush Size
+                            <br>
+                            <input type="range" value="10" min="5" max="50" step="1" id="brushSize"></input>
+                        </label>
+                        <label id="colorTitle">
+                            Color Picker
+                            <br>
+                            <input id="colorPicker" type="color" value="#000000">
+                        </label>
+                        <button id="clear">Clear Canvas</button>
+                        <button id="startGame">Play a Game!</button>
+                    </td>
+                    </th>
+                </thread>
+            </table>
+            <script src="/Doodle-Bug/userDrawingInput.js"></script>
+            <script src="/Doodle-Bug/drawingGame.js"></script>
+        </div>
     </div>
-    <div id="canvasTools">
-        <table>
-            <thread>
-                <th>
-                <td>
-                    <label id="sizeTitle">
-                        Brush Size
-                        <br>
-                        <input type="range" value="10" min="5" max="50" step="1" id="brushSize"></input>
-                    </label>
-                    <label id="colorTitle">
-                        Color Picker
-                        <br>
-                        <input id="colorPicker" type="color" value="#000000">
-                    </label>
-                    <button id="clear">Clear Canvas</button>
-                    <button id ="startGame">Play a Game!</button>
-                </td>
-                </th>
-            </thread>
-        </table>
-    <script src="/live-canvas/userDrawingInput.js"></script>
-    <script src = "/live-canvas/drawingGame.js"></script>
 </body>
 
 </html>
