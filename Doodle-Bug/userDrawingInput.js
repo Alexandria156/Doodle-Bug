@@ -58,6 +58,10 @@ function clearCanvas(){
     context.clearRect(0,0, userCanvas.width, userCanvas.height);
 }
 
+function switchToGame(){
+    console.log("Switching to game");
+    window.location.href = "main.html";
+}
 
 userCanvas.addEventListener("mousedown", startDrawing);
 userCanvas.addEventListener("mouseout", endDraw);
@@ -66,3 +70,4 @@ userCanvas.addEventListener("mousemove", currentlyDrawing);
 colorPicker.addEventListener("input", changeColor);
 sizeChange.addEventListener("input", changeSize);
 wipeCanvas.addEventListener("click", clearCanvas);
+startGame.addEventListener("click", switchToGame);
