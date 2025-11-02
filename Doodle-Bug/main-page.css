@@ -95,3 +95,18 @@
     font-size: x-large;
     font-family: 'Lucida Sans';
 }
+#AIRequest{
+    text-align: left;
+    font-family: 'Lucida Sans';
+    font-size: large;
+    padding-left: 25px;
+}
+
+#submit{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 100px;
+    font-size: x-large;
+    font-family: 'Lucida Sans';
+}
