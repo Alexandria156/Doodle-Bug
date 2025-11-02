@@ -26,6 +26,7 @@ const promptWord = document.getElementById("newWord");
 const gameStart = document.getElementById("game");
 const userCanvas = document.getElementById("sketchCanvas");
 const submitButton = document.getElementById("submit");
+const displayFeedback = document.getElementById("critque");
 let currentWord = "";
 
 
@@ -34,7 +35,7 @@ function startGame(){
 }
 
 function getAWord() {
-    let randomNum = Math.floor(Math.random()) * (words.length);
+    let randomNum = Math.floor((Math.random()) * (words.length));
 
     currentWord = words[randomNum];
     promptWord.textContent = currentWord;
@@ -47,19 +48,24 @@ async function submission(){
     submitButton.textContent = "Reviewing . . ."
 
     try {
-        const canvasImg = userCanvas.toDataUrl('users-work/png');
+        const canvasImg = userCanvas.toDataURL('users-work/png');
         const base64 = canvasImg.split(',')[1];
 
         const critque = await evaluateIlust(base64, currentWord);
+        return critque;
     } 
     catch (error) {
         console.log("Error in submisson:", error);
     }
 }
 
+function displayResponse(critque){
+    return critque;
+}
+
 async function evaluateIlust(canvasImage, prompt) {
     try {
-        console.log("Reveiwinng illustration");
+        console.log("Reveiwing illustration");
 
         const model = ai.getGenerativeModel({ model: "gemini-pro-vision" });
         const evalPrompt = `
@@ -95,5 +101,7 @@ async function evaluateIlust(canvasImage, prompt) {
 }
 
 
-promptWord.addEventListener("input", getAWord());
-gameStart.addEventListener("load", startGame());
+promptWord.addEventListener("input", getAWord);
+gameStart.addEventListener("load", startGame);
+submitButton.addEventListener("click", submission);
+displayFeedback.addEventListener("load", displayResponse);
