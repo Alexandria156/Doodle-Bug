@@ -106,7 +106,10 @@ window.addEventListener("DOMContentLoaded", () => {
     colorPicker;
     sizeChange;
     wipeCanvas;
-
+    getAWord();
+    if(submitButton){
+        submitButton.addEventListener("click", submission);
+    }
 });
 
 //submitButton.addEventListener("click", submission);
