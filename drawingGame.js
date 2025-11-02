@@ -68,7 +68,7 @@ async function evaluateIlust(canvasImage, prompt) {
     try {
         console.log("Reveiwing illustration");
 
-        const model = ai.getGenerativeModel({ model: "gemini-pro-vision" });
+        const model = ai.getGenerativeModel({ model: "gemini-1.5-flash" });
         const evalPrompt = `
         You are an amiable art appraiser who also happens to be an isopod. You request that someone illustrate
         something given one word and they will present their work to you for you to evaluate. Compare the artist's
