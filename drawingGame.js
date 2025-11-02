@@ -1,9 +1,7 @@
-import { GoogleGenAI } from '@google/genai';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const axios = require('axios');
-
 const ai = new GoogleGenerativeAI({ apiKey: 'AIzaSyBD3jJViJ7S1kA2xE-jCTgCPV5P7s2ICD0' });
+
 const words = ["Apple", "Airplane", "Backpack", "Arm", "Bear", "Horse",
     "Bumblebee", "Water bottle", "Carrot", "Clouds", "Chicken", "Chair",
     "Butterfly", "Crown", "T-Rex", "Elephant", "Dolphin", "Dog", "Curtains",
@@ -48,11 +46,13 @@ async function submission(){
     submitButton.textContent = "Reviewing . . ."
 
     try {
-        const canvasImg = userCanvas.toDataURL('users-work/png');
+        const canvasImg = userCanvas.toDataURL('image/png');
         const base64 = canvasImg.split(',')[1];
 
         const critque = await evaluateIlust(base64, currentWord);
-        return critque;
+        displayFeedback.textContent = critque;
+        submitButton.disabled = true;
+        submitButton.textContent = "Submit your work!";
     } 
     catch (error) {
         console.log("Error in submisson:", error);
@@ -100,8 +100,5 @@ async function evaluateIlust(canvasImage, prompt) {
     }
 }
 
-
-promptWord.addEventListener("input", getAWord);
-gameStart.addEventListener("load", startGame);
+window.addEventListener("DOMContentLoaded", startGame);
 submitButton.addEventListener("click", submission);
-displayFeedback.addEventListener("load", displayResponse);
