@@ -1,7 +1,7 @@
 //import { GoogleGenerativeAI } from '@google/generative-ai';
 import { GoogleGenerativeAI } from "https://cdn.skypack.dev/@google/generative-ai";
 console.log("Getting key");
-const ai = new GoogleGenerativeAI({ apiKey: 'AIzaSyBD3jJViJ7S1kA2xE-jCTgCPV5P7s2ICD0' });
+const ai = new GoogleGenerativeAI({ apiKey: "AIzaSyBD3jJViJ7S1kA2xE-jCTgCPV5P7s2ICD0" });
 
 const words = ["Apple", "Airplane", "Backpack", "Arm", "Bear", "Horse",
     "Bumblebee", "Water bottle", "Carrot", "Clouds", "Chicken", "Chair",
