@@ -46,7 +46,7 @@ function getAWord() {
 }
 
 async function submission(){
-    submitButton.disabled = true;
+    submitButton.disabled = false;
     submitButton.textContent = "Reviewing . . ."
 
     try {
