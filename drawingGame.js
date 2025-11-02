@@ -53,7 +53,7 @@ async function submission(){
     try {
         const canvasImg = userCanvas.toDataURL('image/png');
         const base64 = canvasImg.split(',')[1];
-        console.log("Evaluated your work!");
+        console.log("Evaluated your work");
         const critque = await evaluateIlust(base64, currentWord);
         displayFeedback.textContent = critque;
         submitButton.disabled = true;
